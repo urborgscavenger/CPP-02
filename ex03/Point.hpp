@@ -5,15 +5,16 @@
 
 class Point {
 private:
-    Fixed x;
-    Fixed y;
+    Fixed const x;
+    Fixed const y;
+
+    Point& operator=(const Point& other); // Private, not defined
 
 public:
     Point();
     Point(const float x, const float y);
     Point(const Fixed& x, const Fixed& y);
     Point(const Point& other);
-    Point& operator=(const Point& other);
     ~Point();
 
     Fixed getX() const;

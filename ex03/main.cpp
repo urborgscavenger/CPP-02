@@ -11,12 +11,14 @@ int main( void ) {
 
     Point inside(5.0f, 5.0f);
     Point outside(15.0f, 5.0f);
-    Point onEdge(5.0f, 0.0f);
+    Point onEdge(5.0f, 0.0f); // On edge AB
+    Point vertex(0.0f, 0.0f); // Vertex A
 
     WriteLine("Triangle: " << a << ", " << b << ", " << c);
     WriteLine("Point inside: " << inside << " -> " << (bsp(a, b, c, inside) ? "true" : "false"));
     WriteLine("Point outside: " << outside << " -> " << (bsp(a, b, c, outside) ? "true" : "false"));
     WriteLine("Point on edge: " << onEdge << " -> " << (bsp(a, b, c, onEdge) ? "true" : "false"));
+    WriteLine("Point on vertex: " << vertex << " -> " << (bsp(a, b, c, vertex) ? "true" : "false"));
 
     return 0;
 }
