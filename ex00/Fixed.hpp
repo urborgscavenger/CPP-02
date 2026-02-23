@@ -3,7 +3,6 @@
 
 #include <iostream>
 
-// C# Style Aliases
 typedef std::string string;
 #define WriteLine(x) std::cout << x << std::endl
 
