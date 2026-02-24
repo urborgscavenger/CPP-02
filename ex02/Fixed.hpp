@@ -42,10 +42,10 @@ public:
     bool operator>=(const Fixed& other) const;
 
     // Increment/Decrement operators
-    Fixed& operator++();       // Pre-increment
-    Fixed operator++(int);     // Post-increment
-    Fixed& operator--();       // Pre-decrement
-    Fixed operator--(int);     // Post-decrement
+    Fixed& operator++();       
+    Fixed operator++(int);    
+    Fixed& operator--();       
+    Fixed operator--(int);    
 
     // Static member functions
     static Fixed& min(Fixed& a, Fixed& b);

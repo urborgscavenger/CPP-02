@@ -1,24 +1,24 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed() : value(0) {
-    WriteLine("Default constructor called");
+    // WriteLine("Default constructor called");
 }
 
 Fixed::Fixed(const int intValue) : value(intValue << fractionalBits) {
-    WriteLine("Int constructor called");
+    // WriteLine("Int constructor called");
 }
 
 Fixed::Fixed(const float floatValue) : value(roundf(floatValue * (1 << fractionalBits))) {
-    WriteLine("Float constructor called");
+    // WriteLine("Float constructor called");
 }
 
 Fixed::Fixed(const Fixed& other) {
-    WriteLine("Copy constructor called");
+    // WriteLine("Copy constructor called");
     *this = other;
 }
 
 Fixed& Fixed::operator=(const Fixed& other) {
-    WriteLine("Copy assignment operator called");
+    // WriteLine("Copy assignment operator called");
     if (this != &other) {
         this->value = other.getRawBits();
     }
@@ -26,7 +26,7 @@ Fixed& Fixed::operator=(const Fixed& other) {
 }
 
 Fixed::~Fixed() {
-    WriteLine("Destructor called");
+    // WriteLine("Destructor called");
 }
 
 int Fixed::getRawBits(void) const {
