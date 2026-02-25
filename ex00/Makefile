@@ -1,5 +1,5 @@
 CC = g++
-CFLAGS = -Wall -Wextra -Werror -std=c++17
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = a.out
 SRC = main.cpp Fixed.cpp
 OBJ = $(SRC:.cpp=.o)
